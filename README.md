@@ -12,6 +12,7 @@ For testing and learning purposes I am building a linktree fork / tribute (?) fo
 - [Another video tutorial](https://www.youtube.com/watch?v=izxZIOjcSsA) and [Dev Guide](https://dev.to/arvindmehairjan/how-to-build-a-custom-linktree-page-with-html-css-for-beginners-44i3)
 - [CodePen: Bootstrap LinkTree style](https://codepen.io/badiali/pen/yLeRGje)
 
-## 
+## To do
 
 - I am using Live SASS Compiler extension instead of installing npm, command npm run watch-css
+- Pages: Set up CI/CD: Template Pages - HTML (site in public folder)
