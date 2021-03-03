@@ -19,11 +19,12 @@ body {
 }
 
 .logo {
-  width: 20vh;
+  width: 15vh;
   height: 15vh;
 }
 
 h2 {
+  margin-bottom: 0.2rem;
   font-family: "Walter Turncoat", cursive;
   text-transform: uppercase;
   font-weight: normal;
@@ -35,23 +36,60 @@ h2 {
 a {
   display: block;
   max-width: 400px;
-  padding: 0.5rem 1.5rem;
+  padding: 0.6rem;
   margin: 0 auto 15px auto;
   color: whitesmoke;
   font-family: "Mukta", sans-serif;
+  font-size: 1rem;
   border: 2px solid wheat;
   text-decoration: none;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+a:hover {
+  background-color: #f8d08f8a;
+}
+
+a.links__featured {
+  position: relative;
+  background-color: white;
+  color: #060042;
+  font-weight: bold;
+}
+
+a.links__featured::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  border: 2px solid #014B58;
+}
+
+a.links__featured:hover {
+  background-color: #014B58;
+  color: whitesmoke;
 }
 
 .social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .social a {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  padding: 5px 10px;
+  background-color: #014B58;
+}
+
+.social:last-child {
+  margin-right: auto;
 }
 /*# sourceMappingURL=styles.css.map */

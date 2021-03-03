@@ -1,11 +1,19 @@
 @charset 'UTF-8';
 // Docs: https://sass-guidelin.es/
-// I am using only on scss file because it is a simple project.
+// I am using only one scss file because it is a simple project.
+// For practice or learning, look this article about [Structuring your Sass Projects](https://itnext.io/structuring-your-sass-projects-c8d41fa55ed4)
 
 // Google Fonts
-// In case of using another GFonts, remember to add the links in html head
+// In case of using different GFonts, remember to add the links in html > head
 $font-text: 'Mukta', sans-serif;
 $font-titles: 'Walter Turncoat', cursive;
+
+// Some variables for color (background, texts, etc.)
+$color-titles: rgb(162, 230, 26);
+$color-links: whitesmoke;
+$color-links-back: #f8d08f8a;
+$color-featured-back: white;
+$color-social-back: #014B58;
 
 // Reset
 * {
@@ -26,35 +34,72 @@ body {
 }
 
 .logo {
-    width: 20vh;
+    width: 15vh;
     height: 15vh;
 }
 
 
 h2 {
+    margin-bottom: 0.2rem;
     font-family: $font-titles;
     text-transform: uppercase;
     font-weight: normal;
     font-size: 20px;
     letter-spacing: 2px;
-    color: rgb(162, 230, 26);
+    color: $color-titles;
 }
 
 a {
     display: block;
     max-width: 400px;
-    padding: 0.5rem 1.5rem;
+    padding: 0.6rem;
     margin: 0 auto 15px auto;
-    color: whitesmoke;
+    color: $color-links;
     font-family: $font-text;
+    font-size: 1rem;
     border: 2px solid wheat;
     text-decoration: none;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+        background-color: $color-links-back;
+    }
+
+    &.links__featured {
+        position: relative;
+        background-color: $color-featured-back;
+        color: #060042;
+        font-weight: bold;
+
+        &::before {
+            content: "";
+            position: absolute; // When child is absolute, parent must be relative
+            top: 2px;
+            left: 2px;
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+            border: 2px solid $color-social-back;
+        }
+
+        &:hover {
+            background-color: $color-social-back;
+            color: $color-links;
+        }
+    }
 }
 
 .social {
     display: flex;
+    max-width: 400px;
+    margin: 0 auto;
 
     a {
-        flex: 1; // Every a in social class will keep same aspect ratio
+        flex: 1; // Every a in .social will keep same aspect ratio
+        padding: 5px 10px;
+        background-color: $color-social-back;
+    }
+
+    &:last-child {
+        margin-right: auto;
     }
 }
