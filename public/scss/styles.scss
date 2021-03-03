@@ -15,7 +15,7 @@ $color-links-back: #f8d08f8a;
 $color-featured-back: white;
 $color-social-back: #014B58;
 
-// Reset
+// Reset and global styles
 * {
     margin: 0;
     padding: 0;
@@ -25,6 +25,15 @@ $color-social-back: #014B58;
         &::before, &::after {
         box-sizing: border-box;
         }
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 body {
