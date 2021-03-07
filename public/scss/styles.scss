@@ -43,6 +43,9 @@ body {
     min-height: 100vh;
     background-image: url(../img/background.png);
     text-align: center;
+    // This is how I manage to separate right / left borders in small screens 
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .logo {
