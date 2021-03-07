@@ -71,16 +71,15 @@ a.links__featured {
   color: #060042;
   font-weight: 500;
   font-size: 1.1em;
-}
-
-a.links__featured::before {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: calc(100% - 4px);
-  height: calc(100% - 4px);
-  border: 2px solid #014B58;
+  /*         &::before {
+            content: "";
+            position: absolute; // When child is absolute, parent must be relative
+            top: 2px;
+            left: 2px;
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+            border: 2px solid $color-social-back;
+        } */
 }
 
 a.links__featured:hover {
