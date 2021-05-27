@@ -18,14 +18,18 @@ html {
   font-size: 100%;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
 
 body {
   min-height: 100vh;
-  background-image: url(../img/background.png);
+  background: #833ab4;
+  background: -webkit-gradient(linear, left top, right top, from(#833ab4), color-stop(50%, #a22323), to(#fcb045));
+  background: linear-gradient(90deg, #833ab4 0%, #a22323 50%, #fcb045 100%);
   text-align: center;
   padding-left: 10px;
   padding-right: 10px;
@@ -42,9 +46,9 @@ h2 {
   font-family: "Mukta", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 1.3em;
+  font-size: 1.4em;
   letter-spacing: 2px;
-  color: #415f06;
+  color: #d6e9b0;
 }
 
 a {
@@ -111,7 +115,7 @@ a.links__standard {
   border-radius: 60%;
   padding: 18px 8px;
   margin-right: 10px;
-  background-color: #014B58;
+  background-color: #014b58;
   font-size: 0.8rem;
 }
 
@@ -120,6 +124,6 @@ a.links__standard {
 }
 
 .social a#social__linkedin:hover {
-  background-color: #2867B2;
+  background-color: #2867b2;
 }
 /*# sourceMappingURL=styles.css.map */
